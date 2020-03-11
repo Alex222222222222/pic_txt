@@ -1,1 +1,2 @@
-# outlook-rest-api-sample
+# pic_txt
+试图将一张图片用字符串表示。
