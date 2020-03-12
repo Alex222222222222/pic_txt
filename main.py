@@ -11,7 +11,7 @@ def reduce(path):
     width_=512
     k=width_/width
     height_=math.floor(height*k)
-    pic.resize((width_,height_),Image.ANTIALIAS)
+    pic.thumbnail((width_,height_))
     pic.save('reduce.png','png')
     return()
 
@@ -86,7 +86,9 @@ Please choose a file(directory)!!!
     print('Your file will at this directory!!!\nName:%s.txt'%(name,))
     try:
         reduce(path)
+        print('PIC reduced!!!')
         grew()
+        print('PIC is now grew!!!')
         png_txt(name)
     except:
         print('Maybe no such file or directory!!!\nMaybe your file is not a PICTURE!!!\nTry Again!!!')
